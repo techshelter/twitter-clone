@@ -31,6 +31,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-darwin-18
@@ -41,6 +42,7 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   twitter!
+  zeitwerk (~> 2.4.0)
 
 BUNDLED WITH
    2.2.27

@@ -3,18 +3,14 @@ require 'rubygems'
 require 'bundler/setup'
 require 'securerandom'
 require 'event_bus'
-require_relative "twitter/version"
-require_relative "twitter/bus"
-Dir[File.expand_path("../twitter/tweetos/**/*.rb", __FILE__)].sort.each do |file|
-  require file
-end
-Dir[File.expand_path("../twitter/tweets/**/*.rb", __FILE__)].sort.each do |file|
-  require file
-end
+require 'zeitwerk'
 
-Dir[File.expand_path("../twitter/notifications/**/*.rb", __FILE__)].sort.each do |file|
-  require file
-end
+loader = Zeitwerk::Loader.new
+loader.push_dir(File.expand_path("../twitter", __FILE__))
+
+
+loader.setup
+
 
 module Twitter
   class Error < StandardError; end

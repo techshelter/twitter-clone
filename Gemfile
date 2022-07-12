@@ -12,3 +12,5 @@ gem "rspec", "~> 3.0"
 gem 'event_bus', path: '/Users/yannakoun/Project/techshelter/exos/event_bus'
 
 gem 'pry'
+
+gem 'zeitwerk', '~> 2.4.0'
